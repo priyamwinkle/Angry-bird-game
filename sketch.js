@@ -5,7 +5,7 @@ const Bodies=Matter.Bodies;
 var myEngine,myWorld,box1,box2,ground,pig1;
 var log1,box3,box4,log2,pig2,box5,log3,log4;
 var bird1,backgroundImg;
-
+var platform;
 function preload(){
     backgroundImg=loadImage("sprites/bg.png");
 }
@@ -30,6 +30,8 @@ function setup(){
     log4=new Log(870,120,150,-PI/7);
 
     bird1=new Bird(100,100);
+
+    platform=new Ground(150,305,300,170);
 }
 
 function draw(){
@@ -48,5 +50,6 @@ function draw(){
     log3.display();
     log4.display();
     bird1.display();
+    platform.display();
 
 }
